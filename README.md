@@ -1,0 +1,1 @@
+This project presents a validation the American Heart Association's PREVENT equations in the All of Us research program cohort (version 7). The workflow should be generalizable to validation efforts in other settings.
