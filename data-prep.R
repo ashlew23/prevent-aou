@@ -7,7 +7,7 @@ library(lubridate)
 
 # Person Dataframe
 # Convert date_of_birth to Date format
-dataset_38417739_person_df$date_of_birth <- as.Date(dataset_38417739_person_df$date_of_birth)
+dataset_person_df$date_of_birth <- as.Date(dataset_person_df$date_of_birth)
 
 # Select specific columns, calculate age, and drop date_of_birth
 cleaned_person_df <- dataset_person_df %>%
@@ -185,7 +185,7 @@ dataset_measurement_df <- dataset_measurement_df %>%
     NA
   ))
 
-dataset_38417739_measurement_df <- dataset_38417739_measurement_df %>%
+dataset_measurement_df <- dataset_measurement_df %>%
   mutate(sbp = ifelse(
     measurement_concept_id == 3004249 &
     unit_source_value == "mm[Hg]" &
@@ -195,7 +195,7 @@ dataset_38417739_measurement_df <- dataset_38417739_measurement_df %>%
   ))
 head(dataset_measurement_df,3)
 
-cleaned_measurement_df <- dataset_38417739_measurement_df %>%
+cleaned_measurement_df <- dataset_measurement_df %>%
   select(person_id, bmi, totalchol, hdlc, sbp, creatinine, enrollment_start_datetime)
 
 head(cleaned_measurement_df,10)
