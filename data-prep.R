@@ -313,11 +313,11 @@ length(common_individuals)
 ckd_condition_df$ckd_stage <- NA
 
 # Assign stage numbers based on the condition names, starting with the most severe stages
-dataset_03371333_condition_df$ckd_stage[grepl("Chronic kidney disease stage 5|End-stage renal disease|End stage renal failure", dataset_03371333_condition_df$standard_concept_name)] <- 5
-dataset_03371333_condition_df$ckd_stage[grepl("Chronic kidney disease stage 4", dataset_03371333_condition_df$standard_concept_name)] <- 4
-dataset_03371333_condition_df$ckd_stage[grepl("Chronic kidney disease stage 3|Chronic kidney disease stage 3A|Chronic kidney disease stage 3B|Chronic kidney disease stage 3 due to type 2 diabetes mellitus", dataset_03371333_condition_df$standard_concept_name)] <- 3
-dataset_03371333_condition_df$ckd_stage[grepl("Chronic kidney disease stage 2", dataset_03371333_condition_df$standard_concept_name)] <- 2
-dataset_03371333_condition_df$ckd_stage[grepl("Chronic kidney disease stage 1", dataset_03371333_condition_df$standard_concept_name)] <- 1
+cdk_condition_df$ckd_stage[grepl("Chronic kidney disease stage 5|End-stage renal disease|End stage renal failure", cdk_condition_df$standard_concept_name)] <- 5
+cdk_condition_df$ckd_stage[grepl("Chronic kidney disease stage 4", cdk_condition_df$standard_concept_name)] <- 4
+cdk_condition_df$ckd_stage[grepl("Chronic kidney disease stage 3|Chronic kidney disease stage 3A|Chronic kidney disease stage 3B|Chronic kidney disease stage 3 due to type 2 diabetes mellitus", cdk_condition_df$standard_concept_name)] <- 3
+cdk_condition_df$ckd_stage[grepl("Chronic kidney disease stage 2", cdk_condition_df$standard_concept_name)] <- 2
+cdk_condition_df$ckd_stage[grepl("Chronic kidney disease stage 1", cdk_condition_df$standard_concept_name)] <- 1
 
 # Check the updated dataframe
 head(ckd_condition_df)
