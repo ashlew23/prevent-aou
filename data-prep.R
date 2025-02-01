@@ -223,10 +223,8 @@ dataset_survey_df
 
 dataset_survey_df <- dataset_survey_df %>%
   mutate(currsmoke = case_when(
-    answer == 'Smoke Frequency: Every Day' ~ 1,
-    answer == 'Smoke Frequency: Some Days' ~ 1,
-    answer == 'Smoke Frequency: Not At All' ~ 0,
-    TRUE ~ NA_real_  # Assign NA for unexpected values
+    answer %in% c('Smoke Frequency: Every Day', 'Smoke Frequency: Some Days') ~ 1,
+    TRUE ~ 0  # Assign 0 for unexpected values instead of NA
   ))
 
 # Filter rows where 'smoking' is not NA
